@@ -41,7 +41,7 @@ class AES_CBC(object):
         plaintext = self._add_padding(bytearray(plaintext))
         plaintext_blocks = self._split_blocks(plaintext)
         iv = get_random_bytes(16)
-        print("iv generated : " + iv)
+        # print("iv generated : " + iv)
         ciphertext_blocks = []
         for i, block in enumerate(plaintext_blocks):
             if i==0:
@@ -62,8 +62,8 @@ class AES_CBC(object):
         return self._strip_padding("".join(plaintext_blocks))
 
 
-a = AES_CBC()
-enc = (a.encrypt("Flag{W0w_CbC_B1tfl1pp1ng5_fUN!!}"))
-print(enc)
-dec = a.decrypt(enc)
-print(dec)
+# a = AES_CBC()
+# enc = (a.encrypt("Flag{W0w_CbC_B1tfl1pp1ng5_fUN!!}"))
+# print(enc)
+# dec = a.decrypt(enc)
+# print(dec)
